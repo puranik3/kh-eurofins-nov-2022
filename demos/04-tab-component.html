@@ -30,14 +30,28 @@
         )
       };
 
+      const TabGroup = ( props ) => {
+        console.log( props.tabs ); // the array that is passed
+
+        return (
+          <>
+            <Tab icon="code" title="Code" />
+            <Tab icon="circle" title="Issues" />
+            <Tab icon="code-compare" title="Pull request" />
+          </>
+        )
+      };
+
+      const tabGroup1Props = [
+        { icon: 'code', title: 'Code' },
+        { icon: 'circle', title: 'Issues' },
+        { icon: 'code-compare', title: 'Pull request' },
+      ]
+
       // pass on the UI to React DOM
       const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
       root.render(
-        <>
-          <Tab icon="code" title="Code" />
-          <Tab icon="circle" title="Issues" />
-          <Tab icon="git-pull" title="Pull request" />
-        </>
+        <TabGroup tabs={tabGroup1Props} />
       );
     </script>
   </body>
