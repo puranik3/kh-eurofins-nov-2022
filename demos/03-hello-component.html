@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+      .button-wrapper {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React core (architect) Helps define the UI and NOT create/render it -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM (builder) Helps create the UI (render it) -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.4/babel.js" charset="utf-8"></script>
+
+    <script type="text/babel">
+      /**
+       * Components are customizable, reusable pieces of the UI.
+       * They can be "composed" to create larger UIs
+       */
+      const buttonStyle = {
+         backgroundColor: 'lightgray'
+      };
+
+      const iconStyle = {
+         marginRight: '10px',
+         fontSize: '0.8em',
+      };
+
+      const IconButton = ( props ) => {
+        console.log( props );
+
+        return (
+          <button style={buttonStyle}>
+            <i className={"fa-solid fa-" + props.icon} style={iconStyle}></i>
+            {props.title}
+          </button>
+        );
+      };
+
+      // pass on the UI to React DOM
+      const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
+      root.render(
+        <>
+          <span className="button-wrapper">
+            <IconButton title="Unwatch" icon="eye"></IconButton>
+          </span>
+          <span className="button-wrapper">
+            <IconButton title="Fork" icon="code-branch"></IconButton>
+          </span>
+          <span className="button-wrapper">
+            <IconButton title="Star" icon="star"></IconButton>
+          </span>
+        </>
+      );
+    </script>
+  </body>
+</html>
