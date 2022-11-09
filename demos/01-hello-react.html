@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello React</title>
+  </head>
+  <body>
+    <!--
+      <div id="message">
+        Hello <strong>React</strong>
+      </div>
+    -->
+    <div id="root"></div>
+
+    <!-- React core (architect) Helps define the UI and NOT create/render it -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM (builder) Helps create the UI (render it) -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script>
+      // The UI definition - divEl is a React element (an object)
+      const divEl = React.createElement(
+        'div',
+        {
+          id: 'message'
+        },
+        'Hello ',
+          React.createElement(
+            'strong',
+            null, // or {}
+            'React'
+          )
+      );
+
+      // pass on the UI to React DOM
+      const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
+      root.render( divEl );
+    </script>
+  </body>
+</html>
