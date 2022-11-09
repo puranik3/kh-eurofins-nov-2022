@@ -1,6 +1,6 @@
 # React Training
 - React training at Eurofins, Bengaluru
-- Nov 8, 2022
+- Nov 9, 2022
 
 ## Preview
 We shall build a few of the features in this app. Please revisit this very page as the app will not show up when you refresh the browser.  
@@ -101,7 +101,7 @@ https://workshops-server.herokuapp.com/
 
 - Basics of event handling
     - A separate handler - receives event object as argument
-    - Online handler - to pass custom arguments 
+    - Online handler - to pass custom arguments
 
 - Parent-child upstream/downstream communication
     - Shared state is maintained in the common ancestor
@@ -129,7 +129,7 @@ https://workshops-server.herokuapp.com/
             - Parts of the path used to match a component can be dynamic
                 - /path/to/:dynamic/:part/in/the/route
             - useParams() helps extract the dynamic parts from within the matched component
-    
+
 - Deployment
 	- Configuration management in a create-react-app application
 	- Creating a production build
@@ -161,7 +161,7 @@ https://workshops-server.herokuapp.com/
 - [React router](https://reacttraining.com/react-router/web/guides/quick-start)
 - [Redux](https://redux.js.org/)
 - [React Redux](http://react-redux.js.org)
-- [Redux Thunk](https://github.com/reduxjs/redux-thunk) 
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Redux Saga Introduction](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Quick introduction to Mobx](https://mobx.js.org/getting-started.html)
