@@ -2,6 +2,14 @@
 - React training at Eurofins, Bengaluru
 - Nov 8, 2022
 
+## Preview
+We shall build a few of the features in this app. Please revisit this very page as the app will not show up when you refresh the browser.  
+https://vw-angular.s3.ap-south-1.amazonaws.com/index.html
+
+## Backend
+The backend for the app is here  
+https://workshops-server.herokuapp.com/
+
 ## Summary
 - Before beginning React
     - UI library for building frontend apps
@@ -129,3 +137,46 @@
     npm run build
     ```
 	- Deployment on Netlify
+
+## Further exploration
+
+## JavaScript
+- [General reference](javascript.info)
+- [You Don't Know JS, Book Series by Kyle Simpson](https://rileygelwicks.gitbooks.io/you-dont-know-js/)
+- [The Event Loop and Asynchronous Operations](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+- [Promises - good article explaining its workings](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
+- [Functions including how the function context ("this") works](https://www.youtube.com/watch?v=D61O7f4C2HA&t=279s)
+
+### A learning roadmap for React
+- [Reactiflux - Curated list of references created by experts](https://www.reactiflux.com/learning/)
+- [This is a very extensive roadmap for further exploration. Too vast, but comprehensive - can be quite intimidating](https://github.com/adam-golab/react-developer-roadmap)
+
+### Courses on React
+- [List of courses on React](https://reactjs.org/community/courses.html)
+
+### Libraries
+- [React](https://reactjs.org/)
+- [React - Community resources and Support - includes references to tools](https://reactjs.org/community/support.html)
+- [Create React app](https://facebook.github.io/create-react-app/)
+- [React router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Redux](https://redux.js.org/)
+- [React Redux](http://react-redux.js.org)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk) 
+- [Redux Saga Introduction](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
+- [Quick introduction to Mobx](https://mobx.js.org/getting-started.html)
+- [Mobx](https://mobx.js.org/)
+- [Redux vs Mobx](https://www.youtube.com/watch?v=76FRrbY18Bs)
+- [Immutable JS](https://immutable-js.github.io/immutable-js/)
+- [Webpack - Step-by-step guide](https://webpack.js.org/guides)
+- [Resources on Webpack](https://github.com/webpack-contrib/awesome-webpack)
+- [Jest](https://jestjs.io/en/)
+- [Enzyme](https://airbnb.io/enzyme/)
+- [List of CSS in JS libraries for React](https://github.com/FormidableLabs/radium/tree/905227c122b1775775cf8d82c508cce4179cff08/docs/comparison)
+- [Axios Cheat Sheet](https://kapeli.com/cheat_sheets/Axios.docset/Contents/Resources/Documents/index)
+
+### Redux
+- [Dan Abramov's article on Presentational + Container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+- [Dan Abramov's free course on Redux (on Egghead) - Part 1](https://egghead.io/courses/getting-started-with-redux)
+- [Dan Abramov's free course on Redux (on Egghead) - Part 2](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+- [Redux vs Context + useReducer](https://medium.com/javascript-scene/do-react-hooks-replace-redux-210bab340672)
