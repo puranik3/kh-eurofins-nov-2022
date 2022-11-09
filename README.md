@@ -2,6 +2,9 @@
 - React training at Eurofins, Bengaluru
 - Nov 9, 2022
 
+## Codesandbox project
+https://codesandbox.io/s/peaceful-hodgkin-bm8y1b
+
 ## Preview
 We shall build a few of the features in this app. Please revisit this very page as the app will not show up when you refresh the browser.  
 https://vw-angular.s3.ap-south-1.amazonaws.com/index.html
