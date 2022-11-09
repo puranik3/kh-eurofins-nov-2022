@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React core (architect) Helps define the UI and NOT create/render it -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM (builder) Helps create the UI (render it) -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.4/babel.js" charset="utf-8"></script>
+
+    <script type="text/babel">
+      const iconStyle = {
+         marginRight: '10px',
+         fontSize: '0.8em'
+      };
+
+      const activeTabStyle = {
+        borderBottom: '1px solid crimson'
+      }
+
+      const Tab = ( { icon, title, active } ) => {
+        return (
+          <span style={active ? activeTabStyle : {}}>
+            {/*condition ? <i className={"fa-solid fa-" + icon} style={iconStyle}></i> : <span>something else if false</span>*/}
+            {title}
+          </span>
+        );
+      };
+
+      const TabGroup = ( { tabs } ) => {
+        // which tab is currently active - this shall change with time - this is "state" information
+        // React will create this state variable separately for an "instance" of the component
+        // useState() returns an array with [ variable, setter ]
+        const [ activeTab, setActiveTab ] = React.useState( tabs[0].title );
+
+        console.log( 'activeTab =', activeTab );
+
+        console.log( tabs ); // the array that is passed
+
+        // map() generates an array of <tab /> elements, and an array of React element can be rendered as {array}
+        return (
+          <>
+            {
+              tabs.map(
+                tab => <Tab icon={tab.icon} title={tab.title} active={tab.title === activeTab} />
+              )
+            }
+          </>
+        )
+      };
+
+      const tabGroup1Props = [
+        { icon: 'code', title: 'Code' },
+        { icon: 'circle', title: 'Issues' },
+        { icon: 'code-compare', title: 'Pull request' },
+      ];
+
+      // pass on the UI to React DOM
+      const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
+      root.render(
+        <TabGroup tabs={tabGroup1Props} />
+      );
+    </script>
+  </body>
+</html>

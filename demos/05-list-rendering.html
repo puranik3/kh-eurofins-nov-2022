@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React core (architect) Helps define the UI and NOT create/render it -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM (builder) Helps create the UI (render it) -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.4/babel.js" charset="utf-8"></script>
+
+    <script type="text/babel">
+      const iconStyle = {
+         marginRight: '10px',
+         fontSize: '0.8em'
+      };
+
+      const Tab = ( props ) => {
+        return (
+          <span>
+            <i className={"fa-solid fa-" + props.icon} style={iconStyle}></i>
+            {props.title}
+          </span>
+        )
+      };
+
+      const TabGroup = ( props ) => {
+        console.log( props.tabs ); // the array that is passed
+
+        // map() generates an array of <tab /> elements, and an array of React element can be rendered as {array}
+        return (
+          <>
+            {
+              props.tabs.map(
+                tab => <Tab icon={tab.icon} title={tab.title} />
+              )
+            }
+          </>
+        )
+      };
+
+      const tabGroup1Props = [
+        { icon: 'code', title: 'Code' },
+        { icon: 'circle', title: 'Issues' },
+        { icon: 'code-compare', title: 'Pull request' },
+      ];
+
+      // pass on the UI to React DOM
+      const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
+      root.render(
+        <TabGroup tabs={tabGroup1Props} />
+      );
+    </script>
+  </body>
+</html>
