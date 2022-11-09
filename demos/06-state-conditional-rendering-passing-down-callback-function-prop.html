@@ -25,10 +25,13 @@
         borderBottom: '1px solid crimson'
       }
 
-      const Tab = ( { icon, title, active } ) => {
+      const Tab = ( { icon, title, active, setActiveTab } ) => {
+        /*<span style={active ? activeTabStyle : {}} onClick={setActiveTab}>*/
+
         return (
-          <span style={active ? activeTabStyle : {}}>
+          <span style={active ? activeTabStyle : {}} onClick={() => setActiveTab( title )}>
             {/*condition ? <i className={"fa-solid fa-" + icon} style={iconStyle}></i> : <span>something else if false</span>*/}
+            <i className={"fa-solid fa-" + icon} style={iconStyle}></i>
             {title}
           </span>
         );
@@ -49,7 +52,12 @@
           <>
             {
               tabs.map(
-                tab => <Tab icon={tab.icon} title={tab.title} active={tab.title === activeTab} />
+                tab => <Tab
+                  icon={tab.icon}
+                  title={tab.title}
+                  active={tab.title === activeTab}
+                  setActiveTab={setActiveTab}
+                />
               )
             }
           </>
